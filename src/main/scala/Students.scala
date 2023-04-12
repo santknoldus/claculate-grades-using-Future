@@ -1,12 +1,12 @@
 package com.knoldus.futureproject
 
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, Future}
 import scala.io.Source
 import scala.util.{Failure, Success, Try}
-import scala.concurrent.duration.Duration
 
-class ClassOfStudent {
+class Students {
 
   def calculateGrades(filePath: String): Future[Double] = {
     val grades = for {
