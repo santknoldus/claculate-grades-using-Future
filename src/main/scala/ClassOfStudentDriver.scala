@@ -7,10 +7,9 @@ object ClassOfStudentDriver extends App {
 
   private val classOfStudent = new ClassOfStudent
 
-  val grades = classOfStudent.calculateGrades("resources/studentsReport.csv")
+  val grades = classOfStudent.calculateGrades("resources/studentReport.csv")
   grades.onComplete {
     case Success(value) => println("Grade:" + value)
     case Failure(exception) => println(exception)
   }
-  Thread.sleep(100)
 }
